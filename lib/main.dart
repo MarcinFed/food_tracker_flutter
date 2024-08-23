@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:food_tracker_flutter/Screens/tabs.dart';
 
+final kColorScheme = ColorScheme.fromSeed(
+  seedColor: const Color.fromARGB(255, 2, 211, 248),
+);
 
-final theme = ThemeData(
-  colorScheme: ColorScheme.fromSeed(
-    brightness: Brightness.dark,
-    seedColor: const Color.fromARGB(255, 131, 57, 0),
-  ),
+final kDarkColorScheme = ColorScheme.fromSeed(
+  seedColor: const Color.fromARGB(255, 1, 64, 73),
+  brightness: Brightness.dark,
+);
+
+final kTheme = ThemeData(
+  colorScheme: kColorScheme,
+);
+
+final kDarkTheme = ThemeData(
+  colorScheme: kDarkColorScheme,
 );
 
 void main() {
@@ -20,8 +30,12 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: theme,
-      home: ...,
+      title: 'FoodTracker',
+      theme: kTheme,
+      darkTheme: kDarkTheme,
+      home: const Scaffold(
+        body: TabsScreen(),
+      ),
     );
   }
 }
