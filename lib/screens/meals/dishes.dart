@@ -110,7 +110,7 @@ class DishesScreen extends StatelessWidget {
                               category!.imageUrl,
                             ),
                             fit: BoxFit.cover,
-                            height: 300,
+                            height: height * 0.5,
                             width: double.infinity,
                           ),
                         ),
