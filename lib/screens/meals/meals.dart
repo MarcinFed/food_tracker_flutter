@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_tracker_flutter/screens/meals/categories.dart';
 
 class MealsScreen extends StatelessWidget {
   const MealsScreen({super.key});
@@ -18,20 +19,20 @@ class MealsScreen extends StatelessWidget {
                 text: 'Dishes',
               ),
               Tab(
-                text: 'Favorites',
+                text: 'Favourites',
               ),
             ],
           ),
         ),
-        body: const TabBarView(
-          children: [
+        body: TabBarView(
+          children: const [
             Center(
-              child: Text('Categories'),
+               child: CategoriesScreen(),
             ),
-            Center(
+             Center(
               child: Text('Dishes'),
             ),
-            Center(
+             Center(
               child: Text('Favorites'),
             ),
           ],
