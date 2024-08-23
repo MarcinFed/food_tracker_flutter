@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_tracker_flutter/Screens/calendar.dart';
+import 'package:food_tracker_flutter/Screens/shopping_list.dart';
 
 import 'Meals/meals.dart';
 
@@ -23,6 +25,14 @@ class _TabsScreenState extends State<TabsScreen> {
   @override
   Widget build(BuildContext context) {
     Widget activePage = const MealsScreen();
+
+    if(_selectedPageIndex ==0 ) {
+      activePage = const MealsScreen();
+    } else if (_selectedPageIndex == 1) {
+      activePage = const ShoppingListScreen();
+    } else if (_selectedPageIndex == 2) {
+      activePage = const CalendarScreen();
+    }
 
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
