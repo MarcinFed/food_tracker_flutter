@@ -12,7 +12,13 @@ class CategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView(
+    return GridView.builder(
+      itemCount: categories.length,
+      itemBuilder: (ctx, index) {
+        return CategoryGridItem(
+          category: categories[index],
+        );
+      },
       padding: const EdgeInsets.all(16),
       gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
         maxCrossAxisExtent: 400,
@@ -20,12 +26,6 @@ class CategoriesScreen extends StatelessWidget {
         crossAxisSpacing: 16,
         mainAxisSpacing: 16,
       ),
-      children: [
-        for (final category in categories)
-          CategoryGridItem(
-            category: category,
-          )
-      ],
     );
   }
 }
