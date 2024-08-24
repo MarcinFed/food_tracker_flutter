@@ -64,13 +64,13 @@ class CategoryGridItem extends StatelessWidget {
                   Text(
                     category.title,
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          color: Theme.of(context).colorScheme.onBackground,
+                          color: Theme.of(context).colorScheme.onSurface,
                         ),
                   ),
                   Text(
                     category.description,
                     style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: Theme.of(context).colorScheme.onBackground,
+                          color: Theme.of(context).colorScheme.onSurface,
                         ),
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:food_tracker_flutter/Screens/tabs.dart';
 
 final kColorScheme = ColorScheme.fromSeed(
-  seedColor: const Color.fromARGB(255, 2, 211, 248),
+  seedColor: const Color.fromARGB(255, 248, 207, 2),
 );
 
 final kDarkColorScheme = ColorScheme.fromSeed(
-  seedColor: const Color.fromARGB(255, 1, 64, 73),
+  seedColor: const Color.fromARGB(255, 248, 207, 2),
   brightness: Brightness.dark,
 );
 
@@ -15,7 +15,8 @@ final kTheme = ThemeData(
 );
 
 final kDarkTheme = ThemeData(
-  colorScheme: kDarkColorScheme,
+  colorScheme: kDarkColorScheme.copyWith(
+  ),
 );
 
 void main() {

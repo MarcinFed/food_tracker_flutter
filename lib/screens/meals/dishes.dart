@@ -57,8 +57,8 @@ class DishesScreen extends StatelessWidget {
                   Text(
                     textAlign: TextAlign.center,
                     category!.description,
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: Theme.of(context).colorScheme.onBackground,
+                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                          color: Theme.of(context).colorScheme.onSurface,
                         ),
                   ),
                 ],
@@ -120,7 +120,7 @@ class DishesScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         category!.description,
                         style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                              color: Theme.of(context).colorScheme.onBackground,
+                              color: Theme.of(context).colorScheme.onSurface,
                             ),
                       ),
                     ],
